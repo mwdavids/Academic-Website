@@ -1,0 +1,249 @@
+% LaTeX Curriculum Vitae Template
+%
+% Copyright (C) 2004-2009 Jason Blevins <jrblevin@sdf.lonestar.org>
+% http://jblevins.org/projects/cv-template/
+%
+% You may use use this document as a template to create your own CV
+% and you may redistribute the source code freely. No attribution is
+% required in any resulting documents. I do ask that you please leave
+% this notice and the above URL in the source code if you choose to
+% redistribute this file.
+
+\documentclass[letterpaper]{article}
+
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{makecell}
+% \usepackage{fancyhdr}
+% \pagestyle{fancy}
+
+% Comment the following lines to use the default Computer Modern font
+% instead of the Palatino font provided by the mathpazo package.
+% Remove the 'osf' bit if you don't like the old style figures.
+\usepackage[T1]{fontenc}
+\usepackage[sc,osf]{mathpazo}
+
+% Set your name here
+\def\name{Michael W. Davidson\\
+\emph{\normalsize{PhD Student}}}
+
+% Replace this with a link to your CV if you like, or set it empty
+% (as in \def\footerlink{}) to remove the link in the footer:
+\def\footerlink{http://polisci2.ucsd.edu/mwdavidson/cv.pdf}
+
+% The following metadata will show up in the PDF properties
+\hypersetup{
+  colorlinks = true,
+  urlcolor=[rgb]{0,0.2,.6},
+  pdfauthor = {\name},
+  pdfkeywords = {political science, statistics, networks, corruption, clientelism},
+  pdftitle = {\name: Curriculum Vitae},
+  pdfsubject = {Curriculum Vitae},
+  pdfpagemode = UseNone
+}
+
+\geometry{
+  body={6.5in, 8.5in},
+  left=1.0in,
+  top=1.25in
+}
+
+% Customize page headers
+\pagestyle{myheadings}
+\markright{\name}
+\thispagestyle{empty}
+
+% Custom section fonts
+\usepackage{sectsty}
+\sectionfont{\rmfamily\mdseries\Large}
+\subsectionfont{\rmfamily\mdseries\itshape\large}
+
+% Other possible font commands include:
+% \ttfamily for teletype,
+% \sffamily for sans serif,
+% \bfseries for bold,
+% \scshape for small caps,
+% \normalsize, \large, \Large, \LARGE sizes.
+
+% Don't indent paragraphs.
+\setlength\parindent{0em}
+
+% Make lists without bullets
+\renewenvironment{itemize}{
+  \begin{list}{}{
+    \setlength{\leftmargin}{1.5em}
+  }
+}{
+  \end{list}
+}
+
+\begin{document}
+
+% Place name at left
+{\huge \name}
+\vspace{.5em}
+\Xhline{2\arrayrulewidth}
+
+% Alternatively, print name centered and bold:
+%\centerline{\huge \bf \name}
+
+\vspace{0.5em}
+
+\begin{minipage}{0.45\linewidth}
+  \href{http://www.ucsd.edu}{University of California, San Diego} \\
+  Department of Political Science \\
+  347 Social Science Building \\
+  La Jolla, CA 92093-0502
+\end{minipage}
+\begin{minipage}{0.45\linewidth}
+  \begin{tabular}{ll}
+    Phone: & (470) 955-7835 \\
+    Email: & \href{mailto:mwdavidson@ucsd.edu}{\tt mwdavidson@ucsd.edu} \\
+    Homepage: & \href{http://polisci2.ucsd.edu/mwdavidson/}{\tt http://polisci2.ucsd.edu/mwdavidson/} \\
+  \end{tabular}
+\end{minipage}
+
+
+\section*{Education}
+
+\begin{itemize}
+\item Doctorate of Philosophy, University of California, San Diego,
+  \emph{anticipated 2017} 
+
+  \item Bachelor of Arts, Political Science, Brigham Young University,
+    2011
+
+
+\end{itemize}
+
+\section*{Publications}
+
+% \subsection*{Journal Articles}
+
+% \begin{enumerate}
+% \item A General Mathematical Theory of Depreciation, 1929, {\it Journal
+%     of The American Statistical Association} 20, 340--353.
+% \item Differential Equations Subject to Error, 1927, {\it Journal of The
+%     American Statistical Association}.
+% \item Applications of the Theory of Error to the Interpretation of
+%   Trends (with H. Working), 1929, {\it Journal of the American
+%     Statistical Association}.
+% \end{enumerate}
+
+% \subsection*{Proceedings}
+
+% \begin{enumerate}
+% \item ``Inter-ethnic Civic Engagement and Discrimination'', with Joel
+%   S. Selway. Presented at the 2011 American Political Science Association
+%   Annual Conference in Seattle,
+%   WA.
+
+% \item  ``Democracy and Diversity Revisited''. Presented at the 2013
+%   Center for Democracy's Graduate Student Conference. Irvine, CA.
+% \end{enumerate}
+
+\subsection*{Peer-Reviewed Articles}
+\begin{enumerate}
+\item ``Using Networks to Combine `Big Data' and Traditional Surveillance to Improve Influenza Predictions.''  2015. Michael W. Davidson, Dotan A. Haim and Jennifer Radin.
+\href{http://www.nature.com/srep/2015/150129/srep08154/full/srep08154.html}{Scientific Reports} 5 (8154): 1-5.
+\end{enumerate}
+
+\subsection*{Under Review}
+\begin{enumerate}
+  \item ``Prenatal Sex Hormones and Social Integration'' with \href{https://sites.google.com/site/webpagesjaromir/}{Jarom\'{i}r Kov\'{a}\v{r}\'{i}k},
+\href{https://sites.google.com/site/pablobranasgarza/home}{Pablo Bra\~{n}as-Garza}, Shannon Carcelli, Dotan A. Haim and \href{jhfowler.ucsd.edu}{James H. Fowler}. \emph{R\&R} 
+
+% \item ``Incumbency Advantage and Family Success in Local Elections'' with Sara M. Kerosky.
+
+\end{enumerate}
+
+\subsection*{Working Papers (Completed Draft)}
+
+\begin{enumerate}
+\item ``Family Networks and Voting Behavior: Evidence from the Philippines'' with \href{http://www.allenhicken.com/}{Allen Hicken} and \href{http://www.nicoravanilla.com/}{Nico Ravanilla}.
+
+\item ``Using Networks to Find Better Politicians: Evidence from the Philippines'' with \href{http://cesicruz.com/}{Cesi Cruz}.
+
+\item ``Mine All Mine: Corruption and Electoral Competition'' with Sara M Kerosky.
+
+\item \href{http://polisci2.ucsd.edu/mwdavidson/Davidson-Haim_Buying%20Attention-Campaign%20Advertisements%20and%20Candidate%20Salience.pdf}{``Buying Attention: Campaign Advertisements and Candidate Salience''} with Dotan A. Haim.
+
+\item ``Electoral Institutions, Social Structure and Ethnic Voting''.
+
+\item ``Gendered Speech Under Authoritarian Rule: A Structural Topic Analysis of Women's Speeches in the Vietnam National Assembly'' with \href{http://polisci2.ucsd.edu/pschuler/}{Paul Schuler}.
+
+\item ``Measuring Implicit Racial Framing in Campaign Advertisements with Automated Text Analysis'' with Jason Wu.
+\end{enumerate}
+
+\section*{Grants}
+\begin{itemize}
+\item \emph{Remote Sensing and Monitoring Corruption in Developing Democracies.} Frontiers of Innovation Scholar. \$25,000 with Sara Kerosky from the University of California, San Diego. 
+
+\item \emph{Can technology be used to lower the barrier to entry in
+    elections?} \$40,000 with \href{http://cesicruz.com/}{Cesi Cruz} from the \href{http://pdel.ucsd.edu/}{Policy Design and Evaluation Lab}, School of International
+  Relations and Pacific Studies, University of California, San Diego.
+
+\item \emph{Lab Experiments on Caste, Religion and Discrimination}. \$1,500 from the Office on Research and Creative Activities (ORCA), BYU.   
+\end{itemize}
+
+\section*{Awards}
+\begin{itemize}
+  \item APSA SE Asian Politics Group Best Paper Award, 2015. ``Inducement or Entry Ticket? Broker Networks and Vote Buying in Indonesia'' with \href{https://researchers.anu.edu.au/researchers/aspinall-et}{Edward Aspinall}, \href{http://www.allenhicken.com/}{Allen Hicken} and \href{http://www.albany.edu/rockefeller/faculty_pos_weiss.shtml}{Meredith Weiss}.
+\end{itemize}
+
+
+\section*{Presentations}
+\begin{itemize}
+  \item American Political Science Association (2014, 2011)
+  \item Western Political Science Association (2015, 2014)
+  \item Midwest Political Science Association (2015)
+\end{itemize}
+
+\section*{Professional Experience}
+
+\begin{itemize}
+\item Consultant: World Bank, \emph{Candidate Promises, Citizens Knowledge and Vote-Buying: Experimental Evidence from the Philippines} (2013)
+\item Research Assistant:
+  \href{http://jhfowler.ucsd.edu/}{James Fowler} (2013-2014),
+  \href{http://polisci2.ucsd.edu/snunnari/}{Salvatore Nunnari} (2013),
+  \href{http://polisci2.ucsd.edu/cadida/Site/Welcome.html}{Claire
+    Adida} (2013)
+  and 
+  \href{http://fhssfaculty.byu.edu/FacultyPage.aspx?id=jss83}{Joel
+    S. Selway} (2009-2011, 2014-2015).
+\item Intern, \href{cantwell.senate.gov}{United States Senator Maria
+    Cantwell (D)} (2009)
+
+\item Intern, \href{http://www.leg.wa.gov/senate/senators/Pages/roach.aspx}{Washington
+    State Senator Pam Roach (R)} (2005).
+\end{itemize}
+
+\section*{Skills and Languages}
+\begin{itemize}
+\item R, Stata, LaTeX, Gephi, Pajek, Applescript
+\item Tagalog/Filipino (Fluent)
+\end{itemize}
+
+\section*{Academic Service}
+\begin{itemize}
+  \item Co-organizer of UC San Diego \href{http://hng.ucsd.edu/index.html}{Human Nature Group} \hfill 2013 - 2014
+  \item UC San Diego Political Science Recruitment Co-chair \hfill 2013
+\end{itemize}
+
+
+\section*{References}
+\begin{itemize}
+\item \href{https://sites.google.com/site/joelsawatselway/}{Joel S. Selway}, Assistant Professor, Brigham Young University
+\item \href{jhfowler.ucsd.edu}{James H. Fowler}, Professor, University of California, San Diego
+\end{itemize}
+
+\bigskip
+% Footer
+\begin{center}
+  \begin{footnotesize}
+    Last updated: \today \\
+    \href{\footerlink}{\texttt{\footerlink}}
+  \end{footnotesize}
+\end{center}
+
+\end{document}
