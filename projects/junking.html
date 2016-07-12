@@ -1,0 +1,50 @@
+<p><link href="http://kevinburke.bitbucket.org/markdowncss/markdown.css" rel="stylesheet"></link></p>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script>
+<h2 id="junking">Junking</h2>
+<p>By Michael W Davidson and Allen Hicken</p>
+<p><em>Junking</em> is an electoral strategy used by candidates competing for offices elected with block voting rules. Block voting, also known as plurality-at-large voting or multiple non-transferable vote (MNTV) systems, is a voting system for choosing multiple candidates from a single multi-member district. The rules normally permit voters to cast votes for as many candidates as there are seats available. Candidates competing in these contests sometimes encourage voters to <em>undervote</em>, or choose fewer candidates than is allowed, junking their competition. By junking, depriving their competition of any votes, candidates can improve their position in the final tally more than if they simply receive a vote from their supporters because they have also hurt the standing of their competition.</p>
+<h3 id="is-junking-fraud">Is junking 'fraud'?</h3>
+<p>Junking is not fraud, as generally conceived. Fraud is the manipulation of electoral results. Junking, in contrast is an electoral strategy that does not require any manipulation of ballots or vote counts. Rather, candidates can simply encourage supporters to not support any other candidates. Undervoting can be one tell-tale sign of ballot fraud, however. Candidates who manipulate local vote counts may discard votes for others and add votes for themselves, producing a similar result.</p>
+<h3 id="is-it-illegal">Is it illegal?</h3>
+<p>While its not necessarily fraud, encouraging voters to junk other candidates is illegal in many countries that have prohibitions against encouraging any form of undervoting. The motivation for this prohibition is that, like abstention buying, encouraging undervoting deprives voters of their civic rights to choose their leaders.</p>
+<h3 id="where-does-junking-occur">Where does junking occur?</h3>
+<p>References to strategic undervoting have been found in a number of countries. ...</p>
+<h2 id="how-can-we-detect-it">How can we detect it?</h2>
+<p>Detecting attempts by candidates to junk their opposition is not easy. A number of obstacles make it difficult. First, we can not observe individual votes cast, so we have to rely on precinct-level vote totals to infer how many selections voters made, meaning that if compliance in an area is not high, it could be impossible to detect the junking. Second, strategic undervoting can occur without candidates encouraging it, and this is not illegal.</p>
+<h3 id="signatures-of-junking">Signatures of Junking</h3>
+<p>Precincts where junking is prevalent should have a number of visible characteristics. First, there should be a lower than average number of candidates chosen in total. Second, there should be a significant gap in between the vote totals of the candidate or candidates who are encouraging the junking and those who are being junked, like in the figure below.</p>
+<div class="figure">
+<img src="CP70060008.jpeg" />
+
+</div>
+<p>This figure visualizes the vote totals in a single precinct of candidates running for Senate in the Philippines. As you can see the candidate who received the most votes in this precinct received the most by an extremely large margin with the other candidates receiving very few votes. Moreover, the average number of candidates selected by voters in this precinct was only 1.3. Taken together, these pieces of information are highly suggestive of junking.</p>
+<h3 id="proposed-method">Proposed Method</h3>
+<p>We propose to identify precincts that have experienced junking by focusing on the two tell-tale characteristics presented above: undervoting and vote total gaps. Undervoting is simply quantified by estimating the average number of votes cast for a given office (e.g. senator) per voter in a precinct. To quantify the second, we construct a measure of vote total &quot;gappy-ness&quot; called the <em>gap ratio</em>:</p>
+<p><br /><span class="math display">$$gapRatio = \frac{\text{largest gap}}{\text{second largest gap}}$$</span><br /></p>
+<p>In the precinct presented above, the <span class="math inline"><em>g</em><em>a</em><em>p</em><em>R</em><em>a</em><em>t</em><em>i</em><em>o</em></span> is 50, because the difference in votes received by the first and second place candidates (the largest gap) is 50 times larger than the second largest gap.</p>
+<p>One concern with this method is that we might be capturing underlying differences in how favorably voters see candidates. Thus, we propose to normalize candidate vote totals within an area so large that it cannot all have experienced junking, but small enough that it would capture local trends in candidate favorability.</p>
+<p>One example is the phenomenon of favorite sons. In the Philippines for example, 12 candidates are elected every three years to a six year Senate term using block voting rules. Senatorial candidates, who have most often served as a governor and congressional representative, can normally expect strong support from their home province. Nevertheless, junking every precinct in an entire province would require an extremely high degree of coordination between the candidate and others working in that area--and is very unlikely.</p>
+<h4 id="steps">Steps</h4>
+<p>Thus, our proposed process will do the following:</p>
+<blockquote>
+<ol class="incremental" style="list-style-type: decimal">
+<li>Normalize precinct vote counts by candidate, within province,</li>
+<li>Calculate gap ratio for each precinct,</li>
+<li>Bootstrap standard errors for gap ratio,</li>
+<li>Plot the gap ratio against the average number of candidates selected per precinct.</li>
+</ol>
+</blockquote>
+<p><strong>Step 1</strong></p>
+<!-- $$\text{votes}_ijp = \text{precinct}_{j} + \text{province}_{p}*\text{candidate}_{i}$$ -->
+<p>votes = a + precinct + province*candidate + e</p>
+<p>This produces vote totals that are de-meaned by precinct and candidate-province totals (I'm unsure whether we want to include the global intercept a). The candidate*province dummies will help control for an effect of 'favorite sons'. The precinct fixed effects controls for differential precinct sizes (some have more voters than others).</p>
+<p><strong>Step 2</strong></p>
+<p>Next, we can use <span class="math inline"><em>v</em><em>o</em><em>t</em><em>e</em><em>s</em><sub><em>i</em></sub></span> produced by the equation in step 1 to construct a gap ratio following the procedure outlined above. Logging this ratio corrects for the skew, decreasing the infuence of outliers.</p>
+<p><strong>Step 3</strong></p>
+<p>Bootstrap standard errors for the gap ratio by shuffling the candidate-vote total's precinct. In other words, shuffle candidate returns across precincts and recalculate the gap ratio.</p>
+<p><strong>Step 4</strong></p>
+<p>To check the face validity of these results we plot the logged ratio against the gap location and the average number of candidates selected. We expect that the largest gap ratios should appear at low locations (e.g. between the first and second or second and third candidates) and between the 12th and 13th candidates. Where the gap occurs between the 12th and 13th vote-getters then we can infer that a slate of candidates is being promoted locally such that they receive many votes. This is not junking, however, because voters are still selecting many candidates (close to the number allowed).</p>
+<!-- Here is some text containing a footnote.[^somesamplefootnote]
+
+[^somesamplefootnote]: Here is the text of the footnote itself.
+ -->

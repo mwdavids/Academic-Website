@@ -1,0 +1,23 @@
+website map
+
+# index.html (about)
+./index.html
+
+# cv.pdf
+./docs/cv.pdf
+
+# Projects
+	# Dissertation
+	./projects/dissertation.html
+
+	# Philippine Maps
+	./projects/PhilPresMap.html
+
+	# Junking
+	./projects/Junking.html
+
+
+
+	
+
+
