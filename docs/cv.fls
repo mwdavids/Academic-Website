@@ -39,6 +39,8 @@ INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/makecell/makecell.sty
 INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/makecell/makecell.sty
 INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/tools/array.sty
 INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/tools/array.sty
+INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/tools/multicol.sty
+INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/tools/multicol.sty
 INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/base/fontenc.sty
 INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/base/fontenc.sty
 INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/base/t1enc.def

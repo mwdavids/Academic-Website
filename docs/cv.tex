@@ -17,6 +17,9 @@
 % \usepackage{fancyhdr}
 % \pagestyle{fancy}
 
+\usepackage{multicol}
+
+
 % Comment the following lines to use the default Computer Modern font
 % instead of the Palatino font provided by the mathpazo package.
 % Remove the 'osf' bit if you don't like the old style figures.
@@ -29,14 +32,14 @@
 
 % Replace this with a link to your CV if you like, or set it empty
 % (as in \def\footerlink{}) to remove the link in the footer:
-\def\footerlink{http://polisci2.ucsd.edu/mwdavidson/cv.pdf}
+\def\footerlink{http://pages.ucsd.edu/~mwdavids/docs/cv.pdf}
 
 % The following metadata will show up in the PDF properties
 \hypersetup{
   colorlinks = true,
   urlcolor=[rgb]{0,0.2,.6},
   pdfauthor = {\name},
-  pdfkeywords = {political science, statistics, networks, corruption, clientelism},
+  pdfkeywords = {political science, statistics, networks, corruption, clientelism, political parties, data science},
   pdftitle = {\name: Curriculum Vitae},
   pdfsubject = {Curriculum Vitae},
   pdfpagemode = UseNone
@@ -82,7 +85,7 @@
 % Place name at left
 {\huge \name}
 \vspace{.5em}
-\Xhline{2\arrayrulewidth}
+% \Xhline{2\arrayrulewidth}
 
 % Alternatively, print name centered and bold:
 %\centerline{\huge \bf \name}
@@ -99,7 +102,7 @@
   \begin{tabular}{ll}
     Phone: & (470) 955-7835 \\
     Email: & \href{mailto:mwdavidson@ucsd.edu}{\tt mwdavidson@ucsd.edu} \\
-    Homepage: & \href{http://polisci2.ucsd.edu/mwdavidson/}{\tt http://polisci2.ucsd.edu/mwdavidson/} \\
+    Homepage: & \href{http://pages.ucsd.edu/~mwdavids/}{\tt http://pages.ucsd.edu/mwdavids/} \\
   \end{tabular}
 \end{minipage}
 
@@ -107,11 +110,9 @@
 \section*{Education}
 
 \begin{itemize}
-\item Doctorate of Philosophy, University of California, San Diego,
-  \emph{anticipated 2017} 
+\item Doctorate of Philosophy, University of California, San Diego, \emph{anticipated 2017} 
 
-  \item Bachelor of Arts, Political Science, Brigham Young University,
-    2011
+  \item Bachelor of Arts, Political Science, Brigham Young University, 2011
 
 
 \end{itemize}
@@ -148,10 +149,17 @@
 \href{http://www.nature.com/srep/2015/150129/srep08154/full/srep08154.html}{Scientific Reports} 5 (8154): 1-5.
 \end{enumerate}
 
+\subsection*{Other Articles}
+\begin{enumerate}
+\item ``Local Machines and Vote Brokerage in the Philippines.'' 2016. Edward Aspinall, Michael W. Davidson, Allen Hicken and Meredith L. Weiss. \href{https://muse.jhu.edu/article/628451/summary}{Contemporary Southeast Asia: A Journal of International and Strategic Affairs} 38 (2): 191-196.
+\end{enumerate}
+
 \subsection*{Under Review}
 \begin{enumerate}
   \item ``Prenatal Sex Hormones and Social Integration'' with \href{https://sites.google.com/site/webpagesjaromir/}{Jarom\'{i}r Kov\'{a}\v{r}\'{i}k},
 \href{https://sites.google.com/site/pablobranasgarza/home}{Pablo Bra\~{n}as-Garza}, Shannon Carcelli, Dotan A. Haim and \href{jhfowler.ucsd.edu}{James H. Fowler}. \emph{R\&R} 
+
+\item ``Family Networks, Clientelism, and Voter Bahavior: Evidence from the Philippines'' with \href{http://www.allenhicken.com/}{Allen Hicken} and \href{http://www.nicoravanilla.com/}{Nico Ravanilla}.
 
 % \item ``Incumbency Advantage and Family Success in Local Elections'' with Sara M. Kerosky.
 
@@ -160,8 +168,6 @@
 \subsection*{Working Papers (Completed Draft)}
 
 \begin{enumerate}
-\item ``Family Networks and Voting Behavior: Evidence from the Philippines'' with \href{http://www.allenhicken.com/}{Allen Hicken} and \href{http://www.nicoravanilla.com/}{Nico Ravanilla}.
-
 \item ``Mine All Mine: Corruption and Electoral Competition'' with Sara M Kerosky.
 
 \item \href{http://polisci2.ucsd.edu/mwdavidson/Davidson-Haim_Buying%20Attention-Campaign%20Advertisements%20and%20Candidate%20Salience.pdf}{``Buying Attention: Campaign Advertisements and Candidate Salience''} with Dotan A. Haim.
@@ -190,7 +196,11 @@
 
 \section*{Awards}
 \begin{itemize}
-  \item APSA SE Asian Politics Group Best Paper Award, 2015. ``Inducement or Entry Ticket? Broker Networks and Vote Buying in Indonesia'' with \href{https://researchers.anu.edu.au/researchers/aspinall-et}{Edward Aspinall}, \href{http://www.allenhicken.com/}{Allen Hicken} and \href{http://www.albany.edu/rockefeller/faculty_pos_weiss.shtml}{Meredith Weiss}.
+  \item Southeast Asia Research Group Young Fellow, 2016. 
+\end{itemize}
+
+\begin{itemize}
+  \item APSA Southeast Asian Politics Group Best Paper Award, 2015. ``Inducement or Entry Ticket? Broker Networks and Vote Buying in Indonesia'' with \href{https://researchers.anu.edu.au/researchers/aspinall-et}{Edward Aspinall}, \href{http://www.allenhicken.com/}{Allen Hicken} and \href{http://www.albany.edu/rockefeller/faculty_pos_weiss.shtml}{Meredith Weiss}.
 \end{itemize}
 
 
@@ -220,11 +230,22 @@
     State Senator Pam Roach (R)} (2005).
 \end{itemize}
 
-\section*{Skills and Languages}
+\section*{Technical Skills}
+\begin{multicols}{2}
 \begin{itemize}
-\item R, Stata, LaTeX, Gephi, Pajek, HTML
-\item Tagalog/Filipino (Fluent)
+\item R:
+\begin{itemize}
+  \item \texttt{data.table} -- big data manipulation
+  \item \texttt{igraph} -- network analysis
+  \item \texttt{caret} -- machine learning
+  \item \texttt{tm} -- text mining
 \end{itemize}
+\item Stata
+\item LaTeX
+\item Markdown
+\item HTML
+\end{itemize}
+\end{multicols}
 
 \section*{Academic Service}
 \begin{itemize}
@@ -232,11 +253,17 @@
   \item UC San Diego Political Science Recruitment Co-chair \hfill 2013
 \end{itemize}
 
+\section*{Language}
+\begin{itemize}
+  \item Tagalog/Filipino (Fluent)
+\end{itemize}
+
 
 \section*{References}
 \begin{itemize}
-\item \href{https://sites.google.com/site/joelsawatselway/}{Joel S. Selway}, Assistant Professor, Brigham Young University
 \item \href{jhfowler.ucsd.edu}{James H. Fowler}, Professor, University of California, San Diego
+\item \href{http://www.allenhicken.com/}{Allen Hicken}, Professor, University of Michigan
+% \item \href{https://sites.google.com/site/joelsawatselway/}{Joel S. Selway}, Assistant Professor, Brigham Young University
 \end{itemize}
 
 \bigskip
